@@ -47,7 +47,7 @@ type
       function GetFile(aURL, aLocalFileName: string): ArrayOfString;
       function PostForm(aURL: string; aPostData: TStrings; const aLocalFileName: string=''): ArrayOfString;
       function PostForm(aURL,aPostData: string): string;
-
+      function Get(aURL: string): string;
       function LoadFile(): ArrayArrayOfString;
       function ExecuteXML(aXMLDoc: String): ArrayArrayOfString;
       function CreateAction(aOn, aPost: boolean; aURL, aParams, aUser,
@@ -268,6 +268,11 @@ begin
         Result:='Error: '+E.Message;
       end;
    end;
+end;
+
+function TwGet.Get(aURL: string): string;
+begin
+  Result:= fWebGet.Get(aURL);
 end;
 
 function TwGet.DecodeText(aResponseHeaders, aBody: string):string;

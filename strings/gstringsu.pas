@@ -15,7 +15,8 @@ resourcestring
   TemplateFilename                = 'result.html';
 
   URLGramota                      = 'http://gramota.ru/slovari/dic/?word=%s&all=x';
-  URLWiki                         = 'http://ru.wikipedia.org/wiki/Служебная:Search?search=%s';
+  URLWiki                         = 'https://ru.m.wikipedia.org/w/index.php?search=%s';
+  URLBigEnc                       = 'https://bigenc.ru/search?q=%s';
   URLYandex                       = 'https://yandex.ru/search/?text=%s';
 
   GramotaBlockStart               = '</form>';

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Грамотей: TGramoteiU: Класс TGramotei</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<table class="container"><tr><td class="navigation">
+<h2>Грамотей</h2><p><a href="AllUnits.html" class="navigation">Модули</a></p><p><a href="ClassHierarchy.html" class="navigation">Иерархия классов</a></p><p><a href="AllClasses.html" class="navigation">Классы, интерфейсы и объекты</a></p><p><a href="AllTypes.html" class="navigation">Типы</a></p><p><a href="AllVariables.html" class="navigation">Переменные</a></p><p><a href="AllConstants.html" class="navigation">Константы</a></p><p><a href="AllFunctions.html" class="navigation">Процедуры и функции</a></p><p><a href="AllIdentifiers.html" class="navigation">Идентификаторы</a></p></td><td class="content">
+<span id="TGramotei"></span><h1 class="cio">Класс TGramotei</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Описание</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Иерархия</a></div><div class="one_section"><a class="section" href="#PasDoc-Fields">Поля</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Методы</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Свойства</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Модуль</h2>
+<p class="unitlink">
+<a  href="TGramoteiU.html">TGramoteiU</a></p>
+<h2 class="declaration">Объявления</h2>
+<p class="declaration">
+<code>type TGramotei = class(TObject)</code></p>
+<h2 class="description">Описание</h2>
+<p>
+Грамотей. Базовый класс</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Иерархия</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TGramotei</li></ul><h2 class="overview">Обзор</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Поля</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fKeyWord">fKeyWord</a></b>: String;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fonEndRequest">fonEndRequest</a></b>: <a  href="TGramoteiU.html#TRequestEvent">TRequestEvent</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fonStartRequest">fonStartRequest</a></b>: TNotifyEvent;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fCurrentPath">fCurrentPath</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fSearchEngine">fSearchEngine</a></b>: <a  href="gTypesU.html#TSearchEngine">TSearchEngine</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code><b><a  href="TGramoteiU.TGramotei.html#fwGet">fwGet</a></b>: <a  href="wGetU.TwGet.html">TwGet</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Методы</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>function <b><a  href="TGramoteiU.TGramotei.html#ClearLink">ClearLink</a></b>(aSourceText: string): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="TGramoteiU.TGramotei.html#DataFromURL">DataFromURL</a></b>(aURL: string; aCodePage: <a  href="gTypesU.html#TCodePages">TCodePages</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>function <b><a  href="TGramoteiU.TGramotei.html#GetReplyBlock">GetReplyBlock</a></b>(aSourceText: string): string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>function <b><a  href="TGramoteiU.TGramotei.html#GetTemplatedText">GetTemplatedText</a></b>(aSourceText: string; const ClearLinks: boolean=false): string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>function <b><a  href="TGramoteiU.TGramotei.html#GetTemplateLink">GetTemplateLink</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>function <b><a  href="TGramoteiU.TGramotei.html#GetHelpLink">GetHelpLink</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="TGramoteiU.TGramotei.html#DoEndRequest">DoEndRequest</a></b>(aKeyWord, aResult: string; aResultType: <a  href="gTypesU.html#TResultType">TResultType</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="TGramoteiU.TGramotei.html#DoStartRequest">DoStartRequest</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="TGramoteiU.TGramotei.html#Create">Create</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="TGramoteiU.TGramotei.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="TGramoteiU.TGramotei.html#Request">Request</a></b>(aKeyWord: string; aSearchEngine: <a  href="gTypesU.html#TSearchEngine">TSearchEngine</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="TGramoteiU.TGramotei.html#DoDataFromURLEnd">DoDataFromURLEnd</a></b>(aResult: string);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Свойства</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="TGramoteiU.TGramotei.html#HelpLink">HelpLink</a></b>: string read <a  href="TGramoteiU.TGramotei.html#GetHelpLink">GetHelpLink</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="TGramoteiU.TGramotei.html#onStartRequest">onStartRequest</a></b>: TNotifyEvent read <a  href="TGramoteiU.TGramotei.html#fonStartRequest">fonStartRequest</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="TGramoteiU.TGramotei.html#onEndRequest">onEndRequest</a></b>: <a  href="TGramoteiU.html#TRequestEvent">TRequestEvent</a> read <a  href="TGramoteiU.TGramotei.html#fonEndRequest">fonEndRequest</a> write <a  href="TGramoteiU.TGramotei.html#fonEndRequest">fonEndRequest</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Описание</h2>
+<h3 class="detail">Поля</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fKeyWord"></span><code><b>fKeyWord</b>: String;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fonEndRequest"></span><code><b>fonEndRequest</b>: <a  href="TGramoteiU.html#TRequestEvent">TRequestEvent</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fonStartRequest"></span><code><b>fonStartRequest</b>: TNotifyEvent;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fCurrentPath"></span><code><b>fCurrentPath</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fSearchEngine"></span><code><b>fSearchEngine</b>: <a  href="gTypesU.html#TSearchEngine">TSearchEngine</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="fwGet"></span><code><b>fwGet</b>: <a  href="wGetU.TwGet.html">TwGet</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Методы</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="ClearLink"></span><code>function <b>ClearLink</b>(aSourceText: string): string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Процедура обработки результатов выполнения запроса из сети интернет</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="DataFromURL"></span><code>procedure <b>DataFromURL</b>(aURL: string; aCodePage: <a  href="gTypesU.html#TCodePages">TCodePages</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Выборка данных из сети. Запускается как параллельная процедура.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="GetReplyBlock"></span><code>function <b>GetReplyBlock</b>(aSourceText: string): string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Возвращает блок строк с информацией</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="GetTemplatedText"></span><code>function <b>GetTemplatedText</b>(aSourceText: string; const ClearLinks: boolean=false): string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Шаблонизатор. Вставляет aSourceText в файл шаблона.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="GetTemplateLink"></span><code>function <b>GetTemplateLink</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Возвращает ссылку на шаблог</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="GetHelpLink"></span><code>function <b>GetHelpLink</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Возвращает ссылку на справку</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="DoEndRequest"></span><code>procedure <b>DoEndRequest</b>(aKeyWord, aResult: string; aResultType: <a  href="gTypesU.html#TResultType">TResultType</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Обертка для onEndRequest</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="private.gif" alt="Private" title="Private"></a></td>
+<td class="itemcode"><span id="DoStartRequest"></span><code>procedure <b>DoStartRequest</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Обертка для onStartRequest</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Request"></span><code>procedure <b>Request</b>(aKeyWord: string; aSearchEngine: <a  href="gTypesU.html#TSearchEngine">TSearchEngine</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Процедура запроса значения слова</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DoDataFromURLEnd"></span><code>procedure <b>DoDataFromURLEnd</b>(aResult: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Вызывается после окончания выполнения параллельной процедуры</p>
+</td></tr>
+</table>
+<h3 class="detail">Свойства</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HelpLink"></span><code>property <b>HelpLink</b>: string read <a  href="TGramoteiU.TGramotei.html#GetHelpLink">GetHelpLink</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ссылка на файл справки</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="onStartRequest"></span><code>property <b>onStartRequest</b>: TNotifyEvent read <a  href="TGramoteiU.TGramotei.html#fonStartRequest">fonStartRequest</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Событие, происходящее до начала выполнения запроса</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="onEndRequest"></span><code>property <b>onEndRequest</b>: <a  href="TGramoteiU.html#TRequestEvent">TRequestEvent</a> read <a  href="TGramoteiU.TGramotei.html#fonEndRequest">fonEndRequest</a> write <a  href="TGramoteiU.TGramotei.html#fonEndRequest">fonEndRequest</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Событие, происходящее по окончании выполнения запроса</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Сгенерировал <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</td></tr></table></body></html>

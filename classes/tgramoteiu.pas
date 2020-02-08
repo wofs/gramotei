@@ -91,17 +91,22 @@ end;
 
 procedure TGramotei.Request(aKeyWord: string; aSearchEngine: TSearchEngine);
 begin
-  fKeyWord:= aKeyWord;
-  fSearchEngine:= aSearchEngine;
+  try
+    fKeyWord:= aKeyWord;
+    fSearchEngine:= aSearchEngine;
 
-  if UTF8Length(fKeyWord) = 0 then exit;
+    if UTF8Length(fKeyWord) = 0 then exit;
 
-  DoStartRequest;
+    DoStartRequest;
 
-  case aSearchEngine of
-    seGramota        : DataFromURL(CompileURL(fKeyWord, URLGramota), cp1251);
-    seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLWiki), rtURL);
-    seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLYandex), rtURL);
+    case aSearchEngine of
+      seGramota        : DataFromURL(CompileURL(fKeyWord, URLGramota), cp1251);
+      seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLWiki), rtURL);
+      seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLBigEnc), rtURL);
+      seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLYandex), rtURL);
+    end;
+  except
+    raise;
   end;
 end;
 
@@ -127,8 +132,12 @@ begin
     // Беру фрагмент
     aResultText:= GetReplyBlock(aResult);
 
-    // Шаблонизирую и очищаю ссылки
-    aResultText:= GetTemplatedText(aResultText, true);
+    case fSearchEngine of
+      seWiki: aResultText:= GetTemplatedText(aResultText, false);
+      else
+        // Шаблонизирую и очищаю ссылки
+        aResultText:= GetTemplatedText(aResultText, true);
+    end;
 
     DoEndRequest(fKeyWord, aResultText, rtHTML);
   except
@@ -157,9 +166,9 @@ begin
             aCurrentString:= aTemplate.Strings[i];
             aTemplate.Strings[i]:= ClearLink(aCurrentString);
           end;
+      Result:= aTemplate.Text;
     end;
 
-    Result:= aTemplate.Text;
   finally
     FreeAndNil(aTemplate);
   end;
@@ -185,7 +194,8 @@ begin
     if UTF8Length(aURL) = 0 then
       raise  Exception.Create(strExceptionThreadURLIsEmptyRu);
 
-    aResult:= fwGet.PostForm(aURL,'');
+    //aResult:= fwGet.PostForm(aURL,'');
+    aResult:= fwGet.Get(aURL);
 
     case aCodePage of
       cp1251: aResult:= CP1251ToUTF8(aResult);

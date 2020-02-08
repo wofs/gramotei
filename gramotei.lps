@@ -4,14 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Release"/>
-    <Units Count="38">
+    <Units Count="40">
       <Unit0>
         <Filename Value="gramotei.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -21,9 +20,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FmMainU"/>
-        <TopLine Value="213"/>
-        <CursorPos X="6" Y="218"/>
-        <UsageCount Value="42"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="255"/>
+        <CursorPos X="3" Y="257"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -31,9 +31,10 @@
         <Filename Value="libs\wgetu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="wGetU"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="37" Y="9"/>
-        <UsageCount Value="42"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="260"/>
+        <CursorPos X="10" Y="283"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -46,33 +47,35 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8"/>
         <CursorPos X="32" Y="36"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="41"/>
       </Unit3>
       <Unit4>
         <Filename Value="classes\tgramoteiu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TGramoteiU"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="30"/>
-        <CursorPos X="20" Y="44"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="94"/>
+        <CursorPos X="26" Y="105"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="strings\gstringsu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="gStringsU"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="34" Y="25"/>
-        <UsageCount Value="32"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="12" Y="19"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="classes\gtypesu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="gTypesU"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="33" Y="13"/>
-        <UsageCount Value="27"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="56" Y="11"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="utils\gstringutilsu.pas"/>
@@ -81,7 +84,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="6" Y="31"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="31"/>
       </Unit7>
       <Unit8>
         <Filename Value="classes\tcustomrequestthreadu.pas"/>
@@ -313,104 +316,142 @@
         <CursorPos X="41" Y="26"/>
         <UsageCount Value="10"/>
       </Unit37>
+      <Unit38>
+        <Filename Value="C:\lazarus\trunk\lazarus\components\lazutils\winlazfileutils.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="240"/>
+        <CursorPos X="49" Y="260"/>
+        <UsageCount Value="10"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\lazarus\2.0.6\fpc\3.0.4\source\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="5" Y="83"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit39>
     </Units>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="105" TopLine="79"/>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="194" TopLine="178"/>
       </Position1>
       <Position2>
-        <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="48" Column="27" TopLine="27"/>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="111" TopLine="84"/>
       </Position2>
       <Position3>
         <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="89" Column="17" TopLine="64"/>
+        <Caret Line="194" TopLine="178"/>
       </Position3>
       <Position4>
-        <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="105" TopLine="79"/>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="198" TopLine="178"/>
       </Position4>
       <Position5>
-        <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="89" Column="17" TopLine="64"/>
+        <Filename Value="strings\gstringsu.pas"/>
+        <Caret Line="24"/>
       </Position5>
       <Position6>
-        <Filename Value="libs\wgetu.pas"/>
-        <Caret Line="9" Column="27"/>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="111" TopLine="84"/>
       </Position6>
       <Position7>
-        <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="102" Column="35" TopLine="64"/>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="110" TopLine="83"/>
       </Position7>
       <Position8>
         <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="30" Column="18" TopLine="7"/>
+        <Caret Line="116" TopLine="99"/>
       </Position8>
       <Position9>
         <Filename Value="classes\tgramoteiu.pas"/>
-        <Caret Line="183" Column="3" TopLine="156"/>
+        <Caret Line="104" Column="77"/>
       </Position9>
       <Position10>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="105" Column="44" TopLine="79"/>
+        <Caret Line="90" Column="55" TopLine="48"/>
       </Position10>
       <Position11>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="10" Column="54"/>
+        <Caret Line="92" Column="55" TopLine="58"/>
       </Position11>
       <Position12>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="49" TopLine="22"/>
+        <Caret Line="196" Column="14" TopLine="179"/>
       </Position12>
       <Position13>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="151" Column="17" TopLine="129"/>
+        <Caret Line="81" Column="15" TopLine="65"/>
       </Position13>
       <Position14>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="98" TopLine="74"/>
+        <Caret Line="259" Column="3" TopLine="256"/>
       </Position14>
       <Position15>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="233" Column="3" TopLine="201"/>
+        <Caret Line="82" Column="25" TopLine="65"/>
       </Position15>
       <Position16>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="188" Column="29" TopLine="178"/>
+        <Caret Line="263" Column="28" TopLine="250"/>
       </Position16>
       <Position17>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="160" Column="27"/>
+        <Caret Line="197" Column="30" TopLine="195"/>
       </Position17>
       <Position18>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="129" Column="18" TopLine="115"/>
+        <Caret Line="204" Column="30" TopLine="202"/>
       </Position18>
       <Position19>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="93" TopLine="68"/>
+        <Caret Line="175" TopLine="156"/>
       </Position19>
       <Position20>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="261" Column="20" TopLine="229"/>
+        <Caret Line="173" Column="30" TopLine="156"/>
       </Position20>
       <Position21>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="245" Column="19" TopLine="218"/>
+        <Caret Line="204" Column="4" TopLine="184"/>
       </Position21>
       <Position22>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="246" Column="19" TopLine="219"/>
+        <Caret Line="205" Column="4" TopLine="185"/>
       </Position22>
       <Position23>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="231" Column="7" TopLine="226"/>
+        <Caret Line="204" Column="4" TopLine="184"/>
       </Position23>
       <Position24>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="218" Column="6" TopLine="213"/>
+        <Caret Line="201" Column="20" TopLine="185"/>
       </Position24>
+      <Position25>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="105" Column="68" TopLine="85"/>
+      </Position25>
+      <Position26>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="30" Column="18" TopLine="13"/>
+      </Position26>
+      <Position27>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="156" Column="46" TopLine="137"/>
+      </Position27>
+      <Position28>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="155" Column="46" TopLine="136"/>
+      </Position28>
+      <Position29>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="156" Column="46" TopLine="137"/>
+      </Position29>
+      <Position30>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="155" Column="46" TopLine="136"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

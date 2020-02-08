@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, LCLIntf, Menus,
-  Clipbrd, UniqueInstance, HtmlView, LazUTF8, wGetU,
+  Clipbrd, Buttons, UniqueInstance, HtmlView, LazUTF8, wGetU,
   FmAboutU, TGramoteiU, gTypesU, HTMLUn2, HtmlGlobals;
 
 type
@@ -16,7 +16,11 @@ type
   TFmMain = class(TForm)
     edSearch: TEdit;
     HtmlViewer: THtmlViewer;
+    imgDictionary: TImageList;
     mEditorYandex: TMenuItem;
+    mEditorBigEnc: TMenuItem;
+    mHTMLWiki: TMenuItem;
+    mHTMLBigEnc: TMenuItem;
     mmAlwaysOnTop: TMenuItem;
     mmView: TMenuItem;
     mHTMLYandex: TMenuItem;
@@ -25,7 +29,6 @@ type
     mEditorPaste: TMenuItem;
     mEditorPasteSearch: TMenuItem;
     mEditorWiki: TMenuItem;
-    mHTMLWiki: TMenuItem;
     mmGetHelp: TMenuItem;
     mShow: TMenuItem;
     mHTMLSearch: TMenuItem;
@@ -38,22 +41,26 @@ type
     mMainMenu: TMainMenu;
     mExit: TMenuItem;
     mGetWord: TMenuItem;
+    pButtons: TPanel;
     pBottom: TPanel;
     pCenter: TPanel;
     mTray: TPopupMenu;
     mHTML: TPopupMenu;
     mEditor: TPopupMenu;
+    btnGramota: TSpeedButton;
     TrayIcon: TTrayIcon;
     UniqueInstance: TUniqueInstance;
     procedure edSearchKeyPress(Sender: TObject; var Key: char);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure mEditorBigEncClick(Sender: TObject);
     procedure mEditorCopyClick(Sender: TObject);
     procedure mEditorPasteClick(Sender: TObject);
     procedure mEditorPasteSearchClick(Sender: TObject);
     procedure mEditorWikiClick(Sender: TObject);
     procedure mEditorYandexClick(Sender: TObject);
+    procedure mHTMLBigEncClick(Sender: TObject);
     procedure mHTMLCopyClick(Sender: TObject);
     procedure mExitClick(Sender: TObject);
     procedure mGetWordClick(Sender: TObject);
@@ -70,9 +77,11 @@ type
 
     procedure DoEndRequest(Sender: TGramotei; aKeyWord, aResult: string; aResultType: TResultType);
     procedure GetHelp;
+    function GetSearchEngine: TSearchEngine;
     procedure GetWord(aKeyWord: string; aSearchEngine: TSearchEngine);
     procedure OpenWiki(aKeyWord: string);
     procedure OpenYandex(aKeyWord: string);
+    procedure OpenBigEnc(aKeyWord: string);
     procedure Request(aKeyWord: string; aSearchEngine: TSearchEngine);
     procedure ShowHideMainForm;
   private
@@ -102,7 +111,11 @@ end;
 
 procedure TFmMain.Request(aKeyWord: string; aSearchEngine: TSearchEngine);
 begin
-  fGramotei.Request(aKeyWord, aSearchEngine);
+  try
+    fGramotei.Request(aKeyWord, aSearchEngine);
+  except
+    raise;
+  end;
 end;
 
 procedure TFmMain.GetHelp;
@@ -131,10 +144,15 @@ begin
   begin
     fSearchText:= edSearch.Text;
     if UTF8Length(fSearchText)>0 then
-      Request(fSearchText, seGramota)
+      Request(fSearchText, GetSearchEngine)
     else
       GetHelp;
   end;
+end;
+
+function TFmMain.GetSearchEngine:TSearchEngine;
+begin
+  if btnGramota.Down then Result:= seGramota;
 end;
 
 procedure TFmMain.FormCloseQuery(Sender: TObject; var CanClose: boolean);
@@ -148,6 +166,11 @@ procedure TFmMain.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(fGramotei);
   if TrayIcon.ShowIcon then TrayIcon.ShowIcon:= false;
+end;
+
+procedure TFmMain.mEditorBigEncClick(Sender: TObject);
+begin
+  OpenBigEnc(edSearch.Text);
 end;
 
 procedure TFmMain.mEditorCopyClick(Sender: TObject);
@@ -176,6 +199,11 @@ begin
   OpenYandex(edSearch.Text);
 end;
 
+procedure TFmMain.mHTMLBigEncClick(Sender: TObject);
+begin
+   OpenBigEnc(edSearch.Text);
+end;
+
 procedure TFmMain.mHTMLCopyClick(Sender: TObject);
 begin
   Clipboard.AsText:= HtmlViewer.SelText;
@@ -191,7 +219,7 @@ procedure TFmMain.mGetWordClick(Sender: TObject);
 begin
   if UTF8Length(Clipboard.AsText)>0 then
   begin
-    Request(Clipboard.AsText, seGramota);
+    Request(Clipboard.AsText, GetSearchEngine);
     edSearch.Text:=Clipboard.AsText;
     ShowBallon;
   end else
@@ -239,12 +267,17 @@ begin
   Request(aKeyWord, seYandex);
 end;
 
+procedure TFmMain.OpenBigEnc(aKeyWord: string);
+begin
+  Request(aKeyWord, seBigEnc);
+end;
+
 procedure TFmMain.mHTMLSearchClick(Sender: TObject);
 var
   aText: String;
 begin
   aText:= HtmlViewer.SelText;
-  Request(aText, seGramota);
+  Request(aText, GetSearchEngine);
   edSearch.Text:= aText;
 end;
 
