@@ -1,0 +1,36 @@
+object FmAbout: TFmAbout
+  Left = 476
+  Height = 77
+  Top = 231
+  Width = 267
+  BorderStyle = bsDialog
+  Caption = 'О программе'
+  ClientHeight = 77
+  ClientWidth = 267
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object TextAbout: TStaticText
+    Left = 0
+    Height = 49
+    Top = 0
+    Width = 267
+    Align = alClient
+    Alignment = taCenter
+    Caption = '"Грамотей"'#13#10'© Дегтярев А.А., 2020'
+    Font.Height = 20
+    ParentFont = False
+    TabOrder = 0
+  end
+  object TextVersion: TStaticText
+    Left = 0
+    Height = 28
+    Top = 49
+    Width = 267
+    Align = alBottom
+    Alignment = taCenter
+    Font.Height = 20
+    ParentFont = False
+    TabOrder = 1
+  end
+end

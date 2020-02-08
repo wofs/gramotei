@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Release"/>
+    <Units Count="38">
+      <Unit0>
+        <Filename Value="gramotei.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="16" Y="20"/>
+        <UsageCount Value="42"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="forms\fmmainu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FmMainU"/>
+        <TopLine Value="157"/>
+        <CursorPos X="27" Y="160"/>
+        <UsageCount Value="42"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="libs\wgetu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="wGetU"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="37" Y="9"/>
+        <UsageCount Value="42"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="forms\fmaboutu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FmAboutU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="32" Y="36"/>
+        <UsageCount Value="36"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TGramoteiU"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="30"/>
+        <CursorPos X="20" Y="44"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="strings\gstringsu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gStringsU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="25"/>
+        <UsageCount Value="32"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="classes\gtypesu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gTypesU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="33" Y="13"/>
+        <UsageCount Value="27"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="utils\gstringutilsu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gStringUtilsU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="6" Y="31"/>
+        <UsageCount Value="26"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="classes\tcustomrequestthreadu.pas"/>
+        <UnitName Value="TCustomRequestThreadU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="40"/>
+        <UsageCount Value="28"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="forms\fmballonu.pas"/>
+        <ComponentName Value="FmBallon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FmBallonU"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="22"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="18" Y="15"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\2.0.2\components\turbopower_ipro\iphttpbroker.pas"/>
+        <UnitName Value="Iphttpbroker"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <CursorPos X="20" Y="66"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\packages\fcl-xml\src\dom_html.pp"/>
+        <UnitName Value="DOM_HTML"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="31" Y="32"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\2.0.2\components\turbopower_ipro\iphtml.pas"/>
+        <UnitName Value="IpHtml"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15820"/>
+        <CursorPos Y="15841"/>
+        <UsageCount Value="13"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\components\HtmlViewer\source\htmlview.pas"/>
+        <UnitName Value="HtmlView"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="1081"/>
+        <CursorPos Y="1105"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\components\HtmlViewer\source\FramBrwz.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1188"/>
+        <CursorPos Y="1211"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\packages\fcl-xml\src\sax_html.pp"/>
+        <UnitName Value="SAX_HTML"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="23" Y="111"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\wFrameWork\forms\wfstringseditor.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\wFrameWork\forms\wfstringseditor.pas"/>
+        <ComponentName Value="FmStringsEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="wfStringsEditor"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="236"/>
+        <CursorPos Y="257"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\2.0.2\components\synedit\synedit.pp"/>
+        <UnitName Value="SynEdit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1091"/>
+        <CursorPos X="14" Y="1112"/>
+        <UsageCount Value="13"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\2.0.2\components\synedit\synedittypes.pp"/>
+        <UnitName Value="SynEditTypes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="19" Y="83"/>
+        <UsageCount Value="13"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\2.0.2\components\lazutils\lazutf8.pas"/>
+        <UnitName Value="LazUTF8"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="101"/>
+        <CursorPos X="10" Y="124"/>
+        <UsageCount Value="12"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="54" Y="27"/>
+        <UsageCount Value="12"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus\2.0.2\lcl\extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1395"/>
+        <CursorPos X="3" Y="1310"/>
+        <UsageCount Value="11"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus\2.0.2\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2303"/>
+        <CursorPos Y="2326"/>
+        <UsageCount Value="11"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\2.0.2\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="635"/>
+        <CursorPos X="15" Y="656"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\2.0.2\lcl\interfaces\win32\win32trayicon.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="101"/>
+        <CursorPos Y="124"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1608"/>
+        <CursorPos X="15" Y="1631"/>
+        <UsageCount Value="14"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\objpas\classes\classes.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="216"/>
+        <CursorPos X="10" Y="223"/>
+        <UsageCount Value="13"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\objpas\classes\compon.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="249"/>
+        <CursorPos X="3" Y="267"/>
+        <UsageCount Value="12"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus\2.0.2\components\lazutils\lconvencoding.pas"/>
+        <UnitName Value="LConvEncoding"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos X="25" Y="107"/>
+        <UsageCount Value="10"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="4" Y="107"/>
+        <UsageCount Value="10"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\packages\fcl-base\src\custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="69"/>
+        <CursorPos X="14" Y="90"/>
+        <UsageCount Value="10"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\2.0.2\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2654"/>
+        <CursorPos Y="2677"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\inc\objpas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="506"/>
+        <CursorPos Y="529"/>
+        <UsageCount Value="10"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\lazarus\2.0.2\fpc\3.0.4\source\rtl\win\tthread.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="6"/>
+        <UsageCount Value="11"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\2.0.2\lcl\asyncprocess.pp"/>
+        <UnitName Value="AsyncProcess"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="18" Y="18"/>
+        <UsageCount Value="10"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus\components\wthread\wcthread.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="41" Y="26"/>
+        <UsageCount Value="10"/>
+      </Unit37>
+    </Units>
+    <JumpHistory Count="17" HistoryIndex="16">
+      <Position1>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="105" TopLine="79"/>
+      </Position1>
+      <Position2>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="48" Column="27" TopLine="27"/>
+      </Position2>
+      <Position3>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="89" Column="17" TopLine="64"/>
+      </Position3>
+      <Position4>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="105" TopLine="79"/>
+      </Position4>
+      <Position5>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="89" Column="17" TopLine="64"/>
+      </Position5>
+      <Position6>
+        <Filename Value="libs\wgetu.pas"/>
+        <Caret Line="9" Column="27"/>
+      </Position6>
+      <Position7>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="102" Column="35" TopLine="64"/>
+      </Position7>
+      <Position8>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="30" Column="18" TopLine="7"/>
+      </Position8>
+      <Position9>
+        <Filename Value="classes\tgramoteiu.pas"/>
+        <Caret Line="183" Column="3" TopLine="156"/>
+      </Position9>
+      <Position10>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="105" Column="44" TopLine="79"/>
+      </Position10>
+      <Position11>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="10" Column="54"/>
+      </Position11>
+      <Position12>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="49" TopLine="22"/>
+      </Position12>
+      <Position13>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="151" Column="17" TopLine="129"/>
+      </Position13>
+      <Position14>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="98" TopLine="74"/>
+      </Position14>
+      <Position15>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="233" Column="3" TopLine="201"/>
+      </Position15>
+      <Position16>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="188" Column="29" TopLine="178"/>
+      </Position16>
+      <Position17>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="160" Column="27" TopLine="157"/>
+      </Position17>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
