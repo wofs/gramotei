@@ -8,8 +8,9 @@
       <Unit0>
         <Filename Value="gramotei.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="16" Y="20"/>
+        <CursorPos Y="21"/>
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -20,8 +21,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FmMainU"/>
-        <TopLine Value="157"/>
-        <CursorPos X="27" Y="160"/>
+        <TopLine Value="213"/>
+        <CursorPos X="6" Y="218"/>
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -51,7 +52,6 @@
         <Filename Value="classes\tgramoteiu.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TGramoteiU"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="30"/>
         <CursorPos X="20" Y="44"/>
@@ -314,7 +314,7 @@
         <UsageCount Value="10"/>
       </Unit37>
     </Units>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="forms\fmmainu.pas"/>
         <Caret Line="105" TopLine="79"/>
@@ -381,8 +381,36 @@
       </Position16>
       <Position17>
         <Filename Value="forms\fmmainu.pas"/>
-        <Caret Line="160" Column="27" TopLine="157"/>
+        <Caret Line="160" Column="27"/>
       </Position17>
+      <Position18>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="129" Column="18" TopLine="115"/>
+      </Position18>
+      <Position19>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="93" TopLine="68"/>
+      </Position19>
+      <Position20>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="261" Column="20" TopLine="229"/>
+      </Position20>
+      <Position21>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="245" Column="19" TopLine="218"/>
+      </Position21>
+      <Position22>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="246" Column="19" TopLine="219"/>
+      </Position22>
+      <Position23>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="231" Column="7" TopLine="226"/>
+      </Position23>
+      <Position24>
+        <Filename Value="forms\fmmainu.pas"/>
+        <Caret Line="218" Column="6" TopLine="213"/>
+      </Position24>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

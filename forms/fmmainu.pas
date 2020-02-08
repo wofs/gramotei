@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, LCLIntf, Menus,
-  Clipbrd, HtmlView, LazUTF8, wGetU,
+  Clipbrd, UniqueInstance, HtmlView, LazUTF8, wGetU,
   FmAboutU, TGramoteiU, gTypesU, HTMLUn2, HtmlGlobals;
 
 type
@@ -17,6 +17,8 @@ type
     edSearch: TEdit;
     HtmlViewer: THtmlViewer;
     mEditorYandex: TMenuItem;
+    mmAlwaysOnTop: TMenuItem;
+    mmView: TMenuItem;
     mHTMLYandex: TMenuItem;
     mHTMLCopy: TMenuItem;
     mEditorCopy: TMenuItem;
@@ -42,6 +44,7 @@ type
     mHTML: TPopupMenu;
     mEditor: TPopupMenu;
     TrayIcon: TTrayIcon;
+    UniqueInstance: TUniqueInstance;
     procedure edSearchKeyPress(Sender: TObject; var Key: char);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
@@ -56,10 +59,12 @@ type
     procedure mGetWordClick(Sender: TObject);
     procedure mHTMLYandexClick(Sender: TObject);
     procedure mmAboutClick(Sender: TObject);
+    procedure mmAlwaysOnTopClick(Sender: TObject);
     procedure mmGetHelpClick(Sender: TObject);
     procedure mHTMLWikiClick(Sender: TObject);
     procedure mHTMLSearchClick(Sender: TObject);
     procedure mShowClick(Sender: TObject);
+    procedure UniqueInstanceOtherInstance(Sender: TObject; ParamCount: Integer; const Parameters: array of String);
   private
     fGramotei: TGramotei;
 
@@ -69,6 +74,7 @@ type
     procedure OpenWiki(aKeyWord: string);
     procedure OpenYandex(aKeyWord: string);
     procedure Request(aKeyWord: string; aSearchEngine: TSearchEngine);
+    procedure ShowHideMainForm;
   private
     wGet: TwGet;
     ToExit: boolean;
@@ -204,6 +210,14 @@ begin
    FmAbout.ShowModal;
 end;
 
+procedure TFmMain.mmAlwaysOnTopClick(Sender: TObject);
+begin
+  if TMenuItem(Sender).Checked then
+     FormStyle:= fsSystemStayOnTop
+  else
+     FormStyle:= fsNormal;
+end;
+
 procedure TFmMain.mmGetHelpClick(Sender: TObject);
 begin
   GetHelp;
@@ -236,6 +250,11 @@ end;
 
 procedure TFmMain.mShowClick(Sender: TObject);
 begin
+  ShowHideMainForm;
+end;
+
+procedure TFmMain.ShowHideMainForm;
+begin
     if FmMain.Showing then
   begin
     Application.Minimize;
@@ -247,6 +266,11 @@ begin
      FmMain.Show;
      Application.Restore;
   end;
+end;
+
+procedure TFmMain.UniqueInstanceOtherInstance(Sender: TObject; ParamCount: Integer; const Parameters: array of String);
+begin
+  ShowHideMainForm;
 end;
 
 procedure TFmMain.ShowBallon;

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Ãנאלמעוי"
-#define MyAppVersion "0.0.0.22"
+#define MyAppVersion "0.0.0.23"
 #define MyAppPublisher "Äודעÿנוג À.À."
 #define MyCopyright "© Äודעÿנוג À.À., 2020"
 #define MyAppURL "https://github.com/wofs/gramotei"
@@ -25,10 +25,11 @@ VersionInfoCompany={#MyAppPublisher}
 VersionInfoCopyright={#MyCopyright}
 DefaultDirName={autopf}\{#MyAppName}
 LicenseFile=C:\Z\Projects\lazarus\gramotei\bin\LICENSE.txt
+InfoBeforeFile=C:\Z\Projects\lazarus\gramotei\ChangeLog.txt
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=C:\Z\Innosetup\Gramotei
+OutputDir=C:\Z\Projects\lazarus\gramotei\setup
 OutputBaseFilename=setup
 SetupIconFile=C:\Z\Projects\lazarus\gramotei\gramotei.ico
 Compression=lzma

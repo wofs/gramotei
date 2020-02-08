@@ -434,6 +434,7 @@ object FmMain: TFmMain
     end
     object mGetWord: TMenuItem
       Caption = 'Искать слово из буфера обмена'
+      Default = True
       Bitmap.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
@@ -559,6 +560,15 @@ object FmMain: TFmMain
         }
         ShortCut = 16472
         OnClick = mExitClick
+      end
+    end
+    object mmView: TMenuItem
+      Caption = 'Вид'
+      object mmAlwaysOnTop: TMenuItem
+        AutoCheck = True
+        Caption = 'Поверх всех окон'
+        ShowAlwaysCheckable = True
+        OnClick = mmAlwaysOnTopClick
       end
     end
     object mmActions: TMenuItem
@@ -1048,5 +1058,13 @@ object FmMain: TFmMain
       ShortCut = 16470
       OnClick = mEditorYandexClick
     end
+  end
+  object UniqueInstance: TUniqueInstance
+    Enabled = True
+    Identifier = 'Gramotei'
+    UpdateInterval = 100
+    OnOtherInstance = UniqueInstanceOtherInstance
+    left = 228
+    top = 42
   end
 end
