@@ -7,13 +7,14 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, LCLIntf, Menus,
   Clipbrd, Buttons, UniqueInstance, HtmlView, LazUTF8, wGetU,
-  FmAboutU, TGramoteiU, gTypesU, HTMLUn2, HtmlGlobals;
+  FmAboutU, TGramoteiU, gTypesU, gStringUtilsU, gStringsU, HTMLUn2, HtmlGlobals;
 
 type
 
   { TFmMain }
 
   TFmMain = class(TForm)
+    btnMultitran: TSpeedButton;
     edSearch: TEdit;
     HtmlViewer: THtmlViewer;
     imgDictionary: TImageList;
@@ -50,10 +51,13 @@ type
     btnGramota: TSpeedButton;
     TrayIcon: TTrayIcon;
     UniqueInstance: TUniqueInstance;
+    procedure ChangeSearchEngine(Sender: TObject);
     procedure edSearchKeyPress(Sender: TObject; var Key: char);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure HtmlViewerHotSpotClick(Sender: TObject; const SRC: ThtString;
+      var Handled: Boolean);
     procedure mEditorBigEncClick(Sender: TObject);
     procedure mEditorCopyClick(Sender: TObject);
     procedure mEditorPasteClick(Sender: TObject);
@@ -77,6 +81,7 @@ type
 
     procedure DoEndRequest(Sender: TGramotei; aKeyWord, aResult: string; aResultType: TResultType);
     procedure GetHelp;
+    // Определяет сервис для запроса.
     function GetSearchEngine: TSearchEngine;
     procedure GetWord(aKeyWord: string; aSearchEngine: TSearchEngine);
     procedure OpenWiki(aKeyWord: string);
@@ -150,9 +155,18 @@ begin
   end;
 end;
 
+procedure TFmMain.ChangeSearchEngine(Sender: TObject);
+var
+  aKeyWord: TCaption;
+begin
+  aKeyWord:= edSearch.Text;
+  Request(aKeyWord,GetSearchEngine)
+end;
+
 function TFmMain.GetSearchEngine:TSearchEngine;
 begin
   if btnGramota.Down then Result:= seGramota;
+  if btnMultitran.Down then Result:= seMultitran;
 end;
 
 procedure TFmMain.FormCloseQuery(Sender: TObject; var CanClose: boolean);
@@ -166,6 +180,25 @@ procedure TFmMain.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(fGramotei);
   if TrayIcon.ShowIcon then TrayIcon.ShowIcon:= false;
+end;
+
+procedure TFmMain.HtmlViewerHotSpotClick(Sender: TObject; const SRC: ThtString;
+  var Handled: Boolean);
+var
+  aURL: String;
+begin
+  if HTMLContainsServerRoot(SRC) then
+    aURL:= SRC
+  else
+    begin
+      case GetSearchEngine of
+        seMultitran: aURL:= Format('%s%s',[MultitranServerRoot, SRC]);
+      else
+        aURL:= SRC;
+      end;
+    end;
+
+  OpenURL(aURL);
 end;
 
 procedure TFmMain.mEditorBigEncClick(Sender: TObject);

@@ -8,7 +8,7 @@ uses
   Classes, SysUtils;
 
 type
-TSearchEngine  = (seGramota, seWiki, seYandex, seBigEnc);
+TSearchEngine  = (seGramota, seWiki, seYandex, seBigEnc, seMultitran);
 TResultType    = (rtHTML, rtURL);
 TCodePages     = (cpUTF8, cp1251);
 implementation

@@ -33,16 +33,34 @@
 <td class="itemcode"><code><b><a  href="gStringsU.html#URLGramota">URLGramota</a></b>                      = 'http://gramota.ru/slovari/dic/?word=%s&amp;all=x';</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="gStringsU.html#URLWiki">URLWiki</a></b>                         = 'http://ru.wikipedia.org/wiki/Служебная:Search?search=%s';</code></td>
+<td class="itemcode"><code><b><a  href="gStringsU.html#URLMultitran">URLMultitran</a></b>                    = 'https://www.multitran.com/m.exe?l1=2&amp;l2=2&amp;s=%s';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="gStringsU.html#URLWiki">URLWiki</a></b>                         = 'https://ru.m.wikipedia.org/w/index.php?search=%s';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="gStringsU.html#URLBigEnc">URLBigEnc</a></b>                       = 'https://bigenc.ru/search?q=%s';</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><b><a  href="gStringsU.html#URLYandex">URLYandex</a></b>                       = 'https://yandex.ru/search/?text=%s';</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="gStringsU.html#GramotaBlockStart">GramotaBlockStart</a></b>               = '&lt;/form&gt;';</code></td>
+<td class="itemcode"><code><b><a  href="gStringsU.html#GramotaServerRoot">GramotaServerRoot</a></b>               = 'http://gramota.ru/';</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><b><a  href="gStringsU.html#GramotaBlockStart">GramotaBlockStart</a></b>               = '&lt;/form&gt;';</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><b><a  href="gStringsU.html#GramotaBlockEnd">GramotaBlockEnd</a></b>                 = '&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="gStringsU.html#MultitranServerRoot">MultitranServerRoot</a></b>             = 'https://www.multitran.com/';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="gStringsU.html#MultitranBlockStart">MultitranBlockStart</a></b>             = '&lt;/form&gt;';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="gStringsU.html#MultitranBlockEnd">MultitranBlockEnd</a></b>               = '&lt;!--&lt;p';</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><b><a  href="gStringsU.html#ClipboardIsEmptyRu">ClipboardIsEmptyRu</a></b>              = 'Буфер обмена пуст!';</code></td>
@@ -90,7 +108,21 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="URLWiki"></span><code><b>URLWiki</b>                         = 'http://ru.wikipedia.org/wiki/Служебная:Search?search=%s';</code></td>
+<td class="itemcode"><span id="URLMultitran"></span><code><b>URLMultitran</b>                    = 'https://www.multitran.com/m.exe?l1=2&amp;l2=2&amp;s=%s';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="URLWiki"></span><code><b>URLWiki</b>                         = 'https://ru.m.wikipedia.org/w/index.php?search=%s';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="URLBigEnc"></span><code><b>URLBigEnc</b>                       = 'https://bigenc.ru/search?q=%s';</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -98,6 +130,13 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="URLYandex"></span><code><b>URLYandex</b>                       = 'https://yandex.ru/search/?text=%s';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GramotaServerRoot"></span><code><b>GramotaServerRoot</b>               = 'http://gramota.ru/';</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -112,6 +151,27 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="GramotaBlockEnd"></span><code><b>GramotaBlockEnd</b>                 = '&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MultitranServerRoot"></span><code><b>MultitranServerRoot</b>             = 'https://www.multitran.com/';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MultitranBlockStart"></span><code><b>MultitranBlockStart</b>             = '&lt;/form&gt;';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MultitranBlockEnd"></span><code><b>MultitranBlockEnd</b>               = '&lt;!--&lt;p';</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>

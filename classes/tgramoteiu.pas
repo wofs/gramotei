@@ -22,6 +22,7 @@ type
        fonStartRequest: TNotifyEvent;
        fCurrentPath: string;
        fSearchEngine: TSearchEngine;
+       fCurrentURL: string;
        fwGet: TwGet;
 
        // Процедура обработки результатов выполнения запроса из сети интернет
@@ -100,7 +101,14 @@ begin
     DoStartRequest;
 
     case aSearchEngine of
-      seGramota        : DataFromURL(CompileURL(fKeyWord, URLGramota), cp1251);
+      seGramota        : begin
+        fCurrentURL:= CompileURL(fKeyWord, URLGramota);
+        DataFromURL(fCurrentURL, cp1251);
+      end;
+      seMultitran      : begin
+        fCurrentURL:= CompileURL(fKeyWord, URLMultitran);
+        DataFromURL(fCurrentURL, cpUTF8);
+      end;
       seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLWiki), rtURL);
       seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLBigEnc), rtURL);
       seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLYandex), rtURL);
@@ -113,7 +121,8 @@ end;
 function TGramotei.GetReplyBlock(aSourceText:string):string;
 begin
   case fSearchEngine of
-    seGramota: Result:= GetBlock(aSourceText, GramotaBlockStart, GramotaBlockEnd, true);
+    seGramota: Result:= GetBlock(aSourceText, GramotaBlockStart, GramotaBlockEnd, false);
+    seMultitran: Result:= GetBlock(aSourceText, MultitranBlockStart, MultitranBlockEnd, false);
     else
       Result:= aSourceText;
   end;
@@ -133,7 +142,8 @@ begin
     aResultText:= GetReplyBlock(aResult);
 
     case fSearchEngine of
-      seWiki: aResultText:= GetTemplatedText(aResultText, false);
+      // Шаблонизирую без очистки ссылок
+      seMultitran: aResultText:= GetTemplatedText(aResultText, false);
       else
         // Шаблонизирую и очищаю ссылки
         aResultText:= GetTemplatedText(aResultText, true);
@@ -153,21 +163,20 @@ var
 begin
   aTemplate:= TStringList.Create;
   try
-    aTemplate.LoadFromFile(GetTemplateLink);
-
-    Result:= Format(aTemplate.Text,[fKeyWord, aSourceText]);
-
     if ClearLinks then
     begin
-      aTemplate.CommaText:= Result;
+      aTemplate.CommaText:= aSourceText;
 
       for i:=0 to aTemplate.Count-1 do
           begin
             aCurrentString:= aTemplate.Strings[i];
             aTemplate.Strings[i]:= ClearLink(aCurrentString);
           end;
-      Result:= aTemplate.Text;
+      aSourceText:= aTemplate.Text;
     end;
+    aTemplate.Clear;
+    aTemplate.LoadFromFile(GetTemplateLink);
+    Result:= Format(aTemplate.Text,[fKeyWord, aSourceText, fCurrentURL]);
 
   finally
     FreeAndNil(aTemplate);

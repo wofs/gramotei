@@ -15,6 +15,8 @@ uses
   function GetFullPath(aAppPath, aDirectory, aFileName:string): string;
   // Очищает HTMl атрибут по имени
   function HTMLClearAttribute(aAttrName, aSourceText: string):string;
+  // Содержит ли URL корень сайла
+  function HTMLContainsServerRoot(aURL:string):Boolean;
 
 implementation
 
@@ -28,7 +30,7 @@ var
   aPosStart, aPosEnd, aCountStart: PtrInt;
 begin
   aCountStart:= 0;
-  if IncludedStartText then
+  if not IncludedStartText then
     aCountStart:= UTF8Length(aStartText);
 
   aPosStart:= UTF8Pos(aStartText, aSourceText, 1);
@@ -53,6 +55,14 @@ begin
   Result:= UTF8Copy(aSourceText, aPosStart, aPosEnd - aPosStart);
 
   Result:= UTF8StringReplace(aSourceText, Result,'',[rfIgnoreCase])
+end;
+
+function HTMLContainsServerRoot(aURL:string):Boolean;
+const
+  uHTTP = 'http://';
+  uHTTPS = 'https://';
+begin
+  Result:= (UTF8Pos(uHTTP,aURL)>0) or (UTF8Pos(uHTTPS,aURL)>0);
 end;
 
 end.

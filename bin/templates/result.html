@@ -5,8 +5,11 @@
 <style>
 	h2 {
 		name: Заголовок 2;
-		font-size: 1.2em;
-		color: #137C48;
+       font-size: 1.2em;
+	   background-color: #DBDBDB;
+	   padding-top:0.1em;
+	   padding-bottom:0.1em;
+	   border-radius: 4px;		
 	}
 
 	.accent {
@@ -18,15 +21,29 @@
 		font-size: 1.1em;
 	}
 
-	a.Request{
+	a.request{
 		color: #000;	
 	}
 
+	td.gray {
+	   background-color: #DBDBDB;
+	   padding-top:0.1em;
+	   padding-bottom:0.1em;
+	   border-radius: 4px;
+	}   
+
+	td.subj { 
+	   font-style: italic;
+	   text-align: left;
+	   vertical-align: text-top;
+	}	
 </style>
 </head>
 <body>
-<b class="Request">Искали:</b> %s
+<b class="request">Искали: </b> %s
 <hr>	
- %s
+ %s 
+ <hr>
+ </b><a class="source" href="%s">Источник</a>
 </body>
 </html>
