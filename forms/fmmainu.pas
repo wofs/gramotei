@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, LCLIntf, Menus,
-  Clipbrd, Buttons, UniqueInstance, HtmlView, LazUTF8, wGetU,
+  Clipbrd, Buttons, ComboEx, UniqueInstance, HtmlView, LazUTF8, wGetU,
   FmAboutU, TGramoteiU, gTypesU, gStringUtilsU, gStringsU, HTMLUn2, HtmlGlobals;
 
 type
@@ -14,10 +14,13 @@ type
   { TFmMain }
 
   TFmMain = class(TForm)
-    btnJeckSynonims: TSpeedButton;
+    btnMorphology1: TSpeedButton;
+    cbSearchEngine: TComboBoxEx;
     edSearch: TEdit;
     HtmlViewer: THtmlViewer;
+    imgSearchEngine: TImageList;
     imgDictionary: TImageList;
+    Label1: TLabel;
     mEditorYandex: TMenuItem;
     mEditorBigEnc: TMenuItem;
     mHTMLWiki: TMenuItem;
@@ -48,7 +51,6 @@ type
     mTray: TPopupMenu;
     mHTML: TPopupMenu;
     mEditor: TPopupMenu;
-    btnGramota: TSpeedButton;
     TrayIcon: TTrayIcon;
     UniqueInstance: TUniqueInstance;
     procedure ChangeSearchEngine(Sender: TObject);
@@ -165,8 +167,12 @@ end;
 
 function TFmMain.GetSearchEngine:TSearchEngine;
 begin
-  if btnGramota.Down then Result:= seGramota;
-  if btnJeckSynonims.Down then Result:= sePromtOne;
+case cbSearchEngine.ItemIndex of
+  0: Result:= seGramota;
+  1: Result:= seSynonyms;
+  2: Result:= seMorphology;
+  3: Result:= seInterpretation;
+end;
 end;
 
 procedure TFmMain.FormCloseQuery(Sender: TObject; var CanClose: boolean);
@@ -192,7 +198,7 @@ begin
   else
     begin
       case GetSearchEngine of
-        sePromtOne: aURL:= Format('%s%s',[SynonimsSrvRoot, SRC]);
+        seSynonyms: aURL:= Format('%s%s',[SynonymsSrvRoot, SRC]);
       else
         aURL:= SRC;
       end;
@@ -252,8 +258,8 @@ procedure TFmMain.mGetWordClick(Sender: TObject);
 begin
   if UTF8Length(Clipboard.AsText)>0 then
   begin
-    Request(Clipboard.AsText, GetSearchEngine);
-    edSearch.Text:=Clipboard.AsText;
+    //Request(Clipboard.AsText, GetSearchEngine);
+    //edSearch.Text:=Clipboard.AsText;
     ShowBallon;
   end else
   ShowMessage('Буфер обмена пуст!');

@@ -101,12 +101,20 @@ begin
     DoStartRequest;
 
     case aSearchEngine of
-      seGramota        : begin
+      seGramota             : begin
         fCurrentURL:= CompileURL(fKeyWord, GramotaURL);
         DataFromURL(fCurrentURL, cp1251);
       end;
-      sePromtOne      : begin
-        fCurrentURL:= CompileURL(fKeyWord, SynonimsURL);
+      seSynonyms            : begin
+        fCurrentURL:= CompileURL(fKeyWord, SynonymsURL);
+        DataFromURL(fCurrentURL, cpUTF8);
+      end;
+      seMorphology          : begin
+        fCurrentURL:= CompileURL(fKeyWord, MorphologyURL);
+        DataFromURL(fCurrentURL, cpUTF8);
+      end;
+      seInterpretation      : begin
+        fCurrentURL:= CompileURL(fKeyWord, InterpretationURL);
         DataFromURL(fCurrentURL, cpUTF8);
       end;
       seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, WikiURL), rtURL);
@@ -121,8 +129,10 @@ end;
 function TGramotei.GetReplyBlock(aSourceText:string):string;
 begin
   case fSearchEngine of
-    seGramota: Result:= GetBlock(aSourceText, GramotaBlockStart, GramotaBlockEnd, false);
-    sePromtOne: Result:= GetBlock(aSourceText, SynonimsBlockStart, SynonimsBlockEnd, true);
+    seGramota        : Result:= GetBlock(aSourceText, GramotaBlockStart, GramotaBlockEnd, false);
+    seSynonyms       : Result:= GetBlock(aSourceText, SynonymsBlockStart, SynonymsBlockEnd, true);
+    seMorphology     : Result:= GetBlock(aSourceText, MorphologyBlockStart, MorphologyBlockEnd, true);
+    seInterpretation : Result:= GetBlock(aSourceText, InterpretationBlockStart, InterpretationBlockEnd, true);
     else
       Result:= aSourceText;
   end;
@@ -143,7 +153,7 @@ begin
 
     case fSearchEngine of
       // Шаблонизирую без очистки ссылок
-      sePromtOne: aResultText:= GetTemplatedText(aResultText, false);
+      seInterpretation: aResultText:= GetTemplatedText(aResultText, false);
       else
         // Шаблонизирую и очищаю ссылки
         aResultText:= GetTemplatedText(aResultText, true);
@@ -177,8 +187,8 @@ begin
     aTemplate.Clear;
     aTemplate.LoadFromFile(GetTemplateLink);
     Result:= Format(aTemplate.Text,[fKeyWord, aSourceText, fCurrentURL]);
-    aTemplate.Text:= Result;
-    aTemplate.SaveToFile('1.html');
+    //aTemplate.Text:= Result;
+    //aTemplate.SaveToFile('1.html');
   finally
     FreeAndNil(aTemplate);
   end;

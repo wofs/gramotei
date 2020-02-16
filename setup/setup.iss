@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Ãנאלמעוי"
-#define MyAppVersion "0.0.0.32"
+#define MyAppVersion "0.0.0.40"
 #define MyAppPublisher "Äודעÿנוג À.À."
 #define MyCopyright "© Äודעÿנוג À.À., 2020"
 #define MyAppURL "https://github.com/wofs/gramotei"
@@ -30,7 +30,7 @@ InfoBeforeFile=C:\Z\Projects\lazarus\gramotei\ChangeLog.txt
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=C:\Z\Projects\lazarus\gramotei\setup
-OutputBaseFilename=setup
+OutputBaseFilename=GramoteiSetup
 SetupIconFile=C:\Z\Projects\lazarus\gramotei\gramotei.ico
 Compression=lzma
 SolidCompression=yes

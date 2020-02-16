@@ -3,10 +3,27 @@
 <meta charset="utf-8">
 <title>Словарь</title>
 <style>
+	body {
+	    background-color: #eceae2;
+	    background-repeat: repeat-x;
+	    color: #3d3d30;
+	    font-family: Times, Arial, Helvetica, sans-serif;
+	    font-size: 14px;
+	}
+
+	h1 {
+		name: Заголовок 1;
+       font-size: 1.3em;
+	   background-color: #ddddb9;
+	   padding-top:0.1em;
+	   padding-bottom:0.1em;
+	   border-radius: 4px;		
+	}
+
 	h2 {
 		name: Заголовок 2;
        font-size: 1.2em;
-	   background-color: #DBDBDB;
+	   background-color: #ddddb9;
 	   padding-top:0.1em;
 	   padding-bottom:0.1em;
 	   border-radius: 4px;		
@@ -17,16 +34,16 @@
 	   	color: #DC143C;
 	}  
 
-	div {
-		font-size: 1.1em;
-	}
-
 	a.request{
 		color: #000;	
 	}
 
+	.yellow {
+		background-color:#FFFF99 !important;
+	}
+
 	td.gray {
-	   background-color: #DBDBDB;
+	   background-color: #ddddb9;
 	   padding-top:0.1em;
 	   padding-bottom:0.1em;
 	   border-radius: 4px;
@@ -43,16 +60,30 @@
 
    }
    th, td {
-    border: 1px solid black; /* Параметры рамки */
+    border: 1px #c4c49c solid;
     text-align: left; 
     padding: 4px; /* Поля вокруг текста */
    }
    th {
-    background: #DBDBDB; /* Цвет фона ячейки */
+    background: #ddddb9; /* Цвет фона ячейки */
     height: 40px; /* Высота ячеек */
     vertical-align: bottom; /* Выравнивание по нижнему краю */
     padding: 0; /* Убираем поля вокруг текста */
    }
+
+	table.gramemas td {
+		vertical-align:top;
+		font-size:14px;
+		border: 0px
+	}
+
+	.v2-dict-source {
+	    margin-top: 5px;
+	    margin-bottom: -5px;
+	    background-color: #FFFBED;
+	    padding: 5px 5px 5px 5px;
+	    font-size: 10px;
+	}	
 </style>
 </head>
 <body>
