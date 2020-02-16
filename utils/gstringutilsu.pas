@@ -21,8 +21,12 @@ uses
 implementation
 
 function CompileURL(aKeyWord, aURL: string): string;
+var
+  aTmp: String;
 begin
-  Result:= Format(aURL,[UTF8StringReplace(aKeyWord,#32,'%20',[rfReplaceAll])]);
+  aTmp:= UTF8StringReplace(aKeyWord,#32,'%20',[rfReplaceAll]);
+  aTmp:= UTF8LowerCase(aTmp);
+  Result:= Format(aURL,[aTmp]);
 end;
 
 function GetBlock(aSourceText, aStartText, aEndText: string; IncludedStartText: boolean): string;

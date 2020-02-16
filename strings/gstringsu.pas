@@ -39,6 +39,11 @@ resourcestring
   InterpretationBlockStart      = '<div class="v2-dict-entry">';
   InterpretationBlockEnd        = '<div class="v2-p-mob-inarticle-block">';
 
+  QuoteURL             = 'https://sinonim-k-slovu.ru/предложения-со-словом/%s';
+  QuoteSrvRoot         = 'https://sinonim-k-slovu.ru/';
+  QuoteBlockStart      = '<div class="sentences">';
+  QuoteBlockEnd        = '<!--content-->';
+
   ClipboardIsEmptyRu              = 'Буфер обмена пуст!';
   strExceptionThreadURLIsEmptyRu  = 'Пустая ссылка!';
 

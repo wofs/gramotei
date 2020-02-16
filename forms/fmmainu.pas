@@ -172,6 +172,7 @@ case cbSearchEngine.ItemIndex of
   1: Result:= seSynonyms;
   2: Result:= seMorphology;
   3: Result:= seInterpretation;
+  4: Result:= seQuote;
 end;
 end;
 
@@ -198,7 +199,7 @@ begin
   else
     begin
       case GetSearchEngine of
-        seSynonyms: aURL:= Format('%s%s',[SynonymsSrvRoot, SRC]);
+        seQuote: aURL:= Format('%s%s',[QuoteSrvRoot, SRC]);
       else
         aURL:= SRC;
       end;
@@ -258,8 +259,8 @@ procedure TFmMain.mGetWordClick(Sender: TObject);
 begin
   if UTF8Length(Clipboard.AsText)>0 then
   begin
-    //Request(Clipboard.AsText, GetSearchEngine);
-    //edSearch.Text:=Clipboard.AsText;
+    Request(Clipboard.AsText, GetSearchEngine);
+    edSearch.Text:=Clipboard.AsText;
     ShowBallon;
   end else
   ShowMessage('Буфер обмена пуст!');

@@ -117,6 +117,12 @@ begin
         fCurrentURL:= CompileURL(fKeyWord, InterpretationURL);
         DataFromURL(fCurrentURL, cpUTF8);
       end;
+
+      seQuote               : begin
+        fCurrentURL:= CompileURL(fKeyWord, QuoteURL);
+        DataFromURL(fCurrentURL, cpUTF8);
+      end;
+
       seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, WikiURL), rtURL);
       seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
       seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
@@ -133,6 +139,7 @@ begin
     seSynonyms       : Result:= GetBlock(aSourceText, SynonymsBlockStart, SynonymsBlockEnd, true);
     seMorphology     : Result:= GetBlock(aSourceText, MorphologyBlockStart, MorphologyBlockEnd, true);
     seInterpretation : Result:= GetBlock(aSourceText, InterpretationBlockStart, InterpretationBlockEnd, true);
+    seQuote          : Result:= GetBlock(aSourceText, QuoteBlockStart, QuoteBlockEnd, true);
     else
       Result:= aSourceText;
   end;
@@ -151,15 +158,13 @@ begin
     // Беру фрагмент
     aResultText:= GetReplyBlock(aResult);
 
-    //case fSearchEngine of
-    //  // Шаблонизирую без очистки ссылок
-    //  seInterpretation: aResultText:= GetTemplatedText(aResultText, true);
-    //  else
-    //    // Шаблонизирую и очищаю ссылки
-    //    aResultText:= GetTemplatedText(aResultText, true);
-    //end;
-    // Шаблонизирую и очищаю ссылки
-    aResultText:= GetTemplatedText(aResultText, true);
+    case fSearchEngine of
+      // Шаблонизирую без очистки ссылок
+      seQuote: aResultText:= GetTemplatedText(aResultText, false);
+      else
+        // Шаблонизирую и очищаю ссылки
+        aResultText:= GetTemplatedText(aResultText, true);
+    end;
 
     DoEndRequest(fKeyWord, aResultText, rtHTML);
   except
