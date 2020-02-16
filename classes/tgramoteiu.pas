@@ -102,16 +102,16 @@ begin
 
     case aSearchEngine of
       seGramota        : begin
-        fCurrentURL:= CompileURL(fKeyWord, URLGramota);
+        fCurrentURL:= CompileURL(fKeyWord, GramotaURL);
         DataFromURL(fCurrentURL, cp1251);
       end;
-      seMultitran      : begin
-        fCurrentURL:= CompileURL(fKeyWord, URLMultitran);
+      sePromtOne      : begin
+        fCurrentURL:= CompileURL(fKeyWord, SynonimsURL);
         DataFromURL(fCurrentURL, cpUTF8);
       end;
-      seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLWiki), rtURL);
-      seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLBigEnc), rtURL);
-      seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, URLYandex), rtURL);
+      seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, WikiURL), rtURL);
+      seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
+      seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
     end;
   except
     raise;
@@ -122,7 +122,7 @@ function TGramotei.GetReplyBlock(aSourceText:string):string;
 begin
   case fSearchEngine of
     seGramota: Result:= GetBlock(aSourceText, GramotaBlockStart, GramotaBlockEnd, false);
-    seMultitran: Result:= GetBlock(aSourceText, MultitranBlockStart, MultitranBlockEnd, false);
+    sePromtOne: Result:= GetBlock(aSourceText, SynonimsBlockStart, SynonimsBlockEnd, true);
     else
       Result:= aSourceText;
   end;
@@ -143,7 +143,7 @@ begin
 
     case fSearchEngine of
       // Шаблонизирую без очистки ссылок
-      seMultitran: aResultText:= GetTemplatedText(aResultText, false);
+      sePromtOne: aResultText:= GetTemplatedText(aResultText, false);
       else
         // Шаблонизирую и очищаю ссылки
         aResultText:= GetTemplatedText(aResultText, true);
@@ -177,7 +177,8 @@ begin
     aTemplate.Clear;
     aTemplate.LoadFromFile(GetTemplateLink);
     Result:= Format(aTemplate.Text,[fKeyWord, aSourceText, fCurrentURL]);
-
+    aTemplate.Text:= Result;
+    aTemplate.SaveToFile('1.html');
   finally
     FreeAndNil(aTemplate);
   end;

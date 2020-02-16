@@ -14,19 +14,20 @@ resourcestring
   HelpFileName                    = 'help.html';
   TemplateFilename                = 'result.html';
 
-  URLGramota                      = 'http://gramota.ru/slovari/dic/?word=%s&all=x';
-  URLMultitran                    = 'https://www.multitran.com/m.exe?l1=2&l2=2&s=%s';
-  URLWiki                         = 'https://ru.m.wikipedia.org/w/index.php?search=%s';
-  URLBigEnc                       = 'https://bigenc.ru/search?q=%s';
-  URLYandex                       = 'https://yandex.ru/search/?text=%s';
 
+  WikiURL                         = 'https://ru.m.wikipedia.org/w/index.php?search=%s';
+  BigEncURL                       = 'https://bigenc.ru/search?q=%s';
+  YandexURL                       = 'https://yandex.ru/search/?text=%s';
+
+  GramotaURL                      = 'http://gramota.ru/slovari/dic/?word=%s&all=x';
   GramotaServerRoot               = 'http://gramota.ru/';
   GramotaBlockStart               = '</form>';
   GramotaBlockEnd                 = '<div class="clear"></div>';
 
-  MultitranServerRoot             = 'https://www.multitran.com/';
-  MultitranBlockStart             = '</form>';
-  MultitranBlockEnd               = '<!--<p';
+  SynonimsURL                 = 'https://scanwordbase.ru/synonyms-search.php?search_words=%s';
+  SynonimsSrvRoot             = 'https://scanwordbase.ru';
+  SynonimsBlockStart          = '<table class="table table-striped">';
+  SynonimsBlockEnd            = '<h4>';
 
   ClipboardIsEmptyRu              = 'Буфер обмена пуст!';
   strExceptionThreadURLIsEmptyRu  = 'Пустая ссылка!';

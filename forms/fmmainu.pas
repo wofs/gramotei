@@ -14,7 +14,7 @@ type
   { TFmMain }
 
   TFmMain = class(TForm)
-    btnMultitran: TSpeedButton;
+    btnJeckSynonims: TSpeedButton;
     edSearch: TEdit;
     HtmlViewer: THtmlViewer;
     imgDictionary: TImageList;
@@ -166,7 +166,7 @@ end;
 function TFmMain.GetSearchEngine:TSearchEngine;
 begin
   if btnGramota.Down then Result:= seGramota;
-  if btnMultitran.Down then Result:= seMultitran;
+  if btnJeckSynonims.Down then Result:= sePromtOne;
 end;
 
 procedure TFmMain.FormCloseQuery(Sender: TObject; var CanClose: boolean);
@@ -192,7 +192,7 @@ begin
   else
     begin
       case GetSearchEngine of
-        seMultitran: aURL:= Format('%s%s',[MultitranServerRoot, SRC]);
+        sePromtOne: aURL:= Format('%s%s',[SynonimsSrvRoot, SRC]);
       else
         aURL:= SRC;
       end;

@@ -22,7 +22,7 @@ implementation
 
 function CompileURL(aKeyWord, aURL: string): string;
 begin
-  Result:= Format(aURL,[aKeyWord]);
+  Result:= Format(aURL,[UTF8StringReplace(aKeyWord,#32,'%20',[rfReplaceAll])]);
 end;
 
 function GetBlock(aSourceText, aStartText, aEndText: string; IncludedStartText: boolean): string;
