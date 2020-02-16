@@ -1,11 +1,11 @@
 object FmMain: TFmMain
-  Left = 544
-  Height = 490
-  Top = 143
-  Width = 248
+  Left = 423
+  Height = 611
+  Top = 166
+  Width = 443
   Caption = 'Грамотей'
-  ClientHeight = 470
-  ClientWidth = 248
+  ClientHeight = 591
+  ClientWidth = 443
   Menu = mMainMenu
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -15,18 +15,18 @@ object FmMain: TFmMain
   Visible = True
   object pCenter: TPanel
     Left = 0
-    Height = 426
+    Height = 547
     Top = 0
-    Width = 248
+    Width = 443
     Align = alClient
-    ClientHeight = 426
-    ClientWidth = 248
-    TabOrder = 0
+    ClientHeight = 547
+    ClientWidth = 443
+    TabOrder = 1
     object HtmlViewer: THtmlViewer
       Left = 1
-      Height = 398
+      Height = 519
       Top = 1
-      Width = 246
+      Width = 441
       BorderStyle = htSingle
       HistoryMaxCount = 0
       NoSelect = False
@@ -43,11 +43,11 @@ object FmMain: TFmMain
     object pButtons: TPanel
       Left = 1
       Height = 26
-      Top = 399
-      Width = 246
+      Top = 520
+      Width = 441
       Align = alBottom
       ClientHeight = 26
-      ClientWidth = 246
+      ClientWidth = 441
       TabOrder = 1
       object cbSearchEngine: TComboBoxEx
         AnchorSideLeft.Control = Label1
@@ -56,13 +56,14 @@ object FmMain: TFmMain
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = pButtons
         AnchorSideRight.Side = asrBottom
-        Left = 92
+        Left = 98
         Height = 22
         Top = 2
-        Width = 143
+        Width = 332
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 15
         BorderSpacing.Right = 10
+        Font.Height = -13
         Images = imgSearchEngine
         ItemHeight = 16
         ItemsEx = <        
@@ -84,6 +85,8 @@ object FmMain: TFmMain
           end>
         ItemIndex = 0
         OnChange = ChangeSearchEngine
+        ParentFont = False
+        ParentShowHint = False
         TabOrder = 0
       end
       object Label1: TLabel
@@ -91,11 +94,12 @@ object FmMain: TFmMain
         AnchorSideTop.Control = pButtons
         AnchorSideTop.Side = asrCenter
         Left = 11
-        Height = 15
-        Top = 6
-        Width = 66
+        Height = 17
+        Top = 5
+        Width = 72
         BorderSpacing.Left = 10
         Caption = 'Что искать:'
+        Font.Height = -13
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -105,12 +109,12 @@ object FmMain: TFmMain
   object pBottom: TPanel
     Left = 0
     Height = 44
-    Top = 426
-    Width = 248
+    Top = 547
+    Width = 443
     Align = alBottom
     ClientHeight = 44
-    ClientWidth = 248
-    TabOrder = 1
+    ClientWidth = 443
+    TabOrder = 0
     object edSearch: TEdit
       AnchorSideLeft.Control = pBottom
       AnchorSideTop.Control = pBottom
@@ -121,7 +125,7 @@ object FmMain: TFmMain
       Left = 4
       Height = 35
       Top = 4
-      Width = 240
+      Width = 435
       Align = alCustom
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 3

@@ -151,13 +151,15 @@ begin
     // Беру фрагмент
     aResultText:= GetReplyBlock(aResult);
 
-    case fSearchEngine of
-      // Шаблонизирую без очистки ссылок
-      seInterpretation: aResultText:= GetTemplatedText(aResultText, false);
-      else
-        // Шаблонизирую и очищаю ссылки
-        aResultText:= GetTemplatedText(aResultText, true);
-    end;
+    //case fSearchEngine of
+    //  // Шаблонизирую без очистки ссылок
+    //  seInterpretation: aResultText:= GetTemplatedText(aResultText, true);
+    //  else
+    //    // Шаблонизирую и очищаю ссылки
+    //    aResultText:= GetTemplatedText(aResultText, true);
+    //end;
+    // Шаблонизирую и очищаю ссылки
+    aResultText:= GetTemplatedText(aResultText, true);
 
     DoEndRequest(fKeyWord, aResultText, rtHTML);
   except
