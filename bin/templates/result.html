@@ -1,11 +1,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Словарь</title>
+<title>Грамотей</title>
 <style>
 	body {
-	    background-color: #eceae2;
-	    background-repeat: repeat-x;
 	    color: #3d3d30;
 	    font-family: Times, Arial, Helvetica, sans-serif;
 	    font-size: 14px;
@@ -29,6 +27,19 @@
 	   border-radius: 4px;		
 	}
 
+	a:link, a:visited {
+		color:#3d3d30;
+	}
+	a:hover {
+		color:#663300;
+		text-decoration:none;
+	}
+
+	div.hr {		
+		height:5px;
+		border:0;
+	}	
+
 	.accent {
 	  	name: Ударение;
 	   	color: #DC143C;
@@ -39,15 +50,8 @@
 	}
 
 	.yellow {
-		background-color:#FFFF99 !important;
+		background-color:#ffffcc;
 	}
-
-	td.gray {
-	   background-color: #ddddb9;
-	   padding-top:0.1em;
-	   padding-bottom:0.1em;
-	   border-radius: 4px;
-	}   
 
 	td.subj { 
 	   font-style: italic;
@@ -56,19 +60,22 @@
 	}	
 
    table {
-    border-collapse: collapse; /* Убираем двойные линии между ячейками */
-
+    border-collapse: collapse; 
+    margin: 10px 0;
    }
+
    th, td {
     border: 1px #c4c49c solid;
-    text-align: left; 
-    padding: 4px; /* Поля вокруг текста */
+    text-align: left;     
+    vertical-align:top;	
+	padding: 2px 8px;    
    }
+
    th {
-    background: #ddddb9; /* Цвет фона ячейки */
-    height: 40px; /* Высота ячеек */
-    vertical-align: bottom; /* Выравнивание по нижнему краю */
-    padding: 0; /* Убираем поля вокруг текста */
+    background: #ddddb9;   
+    text-align: center;
+    vertical-align: center;
+    padding: 2px 8px; 
    }
 
 	table.gramemas td {

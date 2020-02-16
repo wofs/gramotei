@@ -120,7 +120,7 @@ begin
     fWebGet.AddHeader('User-Agent','Mozilla/5.0 (compatible; fpweb)');
     fActions:= TwActions.Create;
     fWebGet.IOTimeout:= 6000;
-
+    fWebGet.AllowRedirect:= true;
     fLocalPath:= GetPath('prices');
 end;
 

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Ãנאלמעוי"
-#define MyAppVersion "0.0.0.41"
+#define MyAppVersion "0.0.0.42"
 #define MyAppPublisher "Äודעÿנוג À.À."
 #define MyCopyright "© Äודעÿנוג À.À., 2020"
 #define MyAppURL "https://github.com/wofs/gramotei"
