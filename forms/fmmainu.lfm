@@ -508,7 +508,7 @@ object FmMain: TFmMain
     }
     Hint = 'Грамотей'
     Visible = True
-    OnDblClick = mShowClick
+    OnDblClick = TrayIconDblClick
     left = 431
     top = 163
   end

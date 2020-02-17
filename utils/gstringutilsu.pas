@@ -24,7 +24,8 @@ function CompileURL(aKeyWord, aURL: string): string;
 var
   aTmp: String;
 begin
-  aTmp:= UTF8StringReplace(aKeyWord,#32,'%20',[rfReplaceAll]);
+  aTmp:= UTF8Trim(aKeyWord);
+  aTmp:= UTF8StringReplace(aTmp,#32,'%20',[rfReplaceAll]);
   aTmp:= UTF8LowerCase(aTmp);
   Result:= Format(aURL,[aTmp]);
 end;

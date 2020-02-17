@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, LCLIntf, Menus,
   Clipbrd, Buttons, ComboEx, UniqueInstance, HtmlView, LazUTF8, wGetU,
-  FmAboutU, TGramoteiU, gTypesU, gStringUtilsU, gStringsU, HTMLUn2, HtmlGlobals;
+  FmAboutU, TGramoteiU, gTypesU, gStringUtilsU, gStringsU, HtmlGlobals;
 
 type
 
@@ -77,6 +77,7 @@ type
     procedure mHTMLWikiClick(Sender: TObject);
     procedure mHTMLSearchClick(Sender: TObject);
     procedure mShowClick(Sender: TObject);
+    procedure TrayIconDblClick(Sender: TObject);
     procedure UniqueInstanceOtherInstance(Sender: TObject; ParamCount: Integer; const Parameters: array of String);
   private
     fGramotei: TGramotei;
@@ -92,8 +93,8 @@ type
     procedure Request(aKeyWord: string; aSearchEngine: TSearchEngine);
     procedure ShowHideMainForm;
   private
-    wGet: TwGet;
     ToExit: boolean;
+    LastWindowsState: TWindowState;
     procedure ShowBallon;
   public
 
@@ -326,15 +327,22 @@ begin
   ShowHideMainForm;
 end;
 
+procedure TFmMain.TrayIconDblClick(Sender: TObject);
+begin
+  ShowBallon;
+end;
+
 procedure TFmMain.ShowHideMainForm;
 begin
     if FmMain.Showing then
   begin
+    LastWindowsState:= self.WindowState;
     Application.Minimize;
     FmMain.Hide;
   end
   else
   begin
+     LastWindowsState:= self.WindowState;
      FmMain.WindowState:= wsNormal;
      FmMain.Show;
      Application.Restore;
@@ -347,17 +355,15 @@ begin
 end;
 
 procedure TFmMain.ShowBallon;
-var
-  aPos: TPoint;
 begin
   if not self.Visible then
   begin
-    FmMain.WindowState:= wsNormal;
+    FmMain.WindowState:= LastWindowsState;
     self.Visible:= true;
     Application.Restore;
-    aPos:= Mouse.CursorPos;
-    self.Top:= aPos.y-self.Height-50;
-    self.Left:= aPos.x-self.Width;
+    self.Top:= Screen.DesktopHeight-self.Height-70;
+    self.Left:= Screen.DesktopWidth-self.Width-15;
+    self.ShowOnTop;
   end;
 end;
 
