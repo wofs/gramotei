@@ -361,8 +361,8 @@ begin
     FmMain.WindowState:= LastWindowsState;
     self.Visible:= true;
     Application.Restore;
-    self.Top:= Screen.DesktopHeight-self.Height-70;
-    self.Left:= Screen.DesktopWidth-self.Width-15;
+    //self.Top:= Screen.DesktopHeight-self.Height-70;
+    //self.Left:= Screen.DesktopWidth-self.Width-15;
     self.ShowOnTop;
   end;
 end;

@@ -125,7 +125,7 @@ begin
 
       seWiki           : DoEndRequest(aKeyWord, CompileURL(fKeyWord, WikiURL), rtURL);
       seBigEnc         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
-      seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, BigEncURL), rtURL);
+      seYandex         : DoEndRequest(aKeyWord, CompileURL(fKeyWord, YandexURL), rtURL);
     end;
   except
     raise;
